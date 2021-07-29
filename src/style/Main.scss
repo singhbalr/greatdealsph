@@ -1,0 +1,27 @@
+$mainColorScheme : #70e6e6;
+
+.home-container{
+    background : $mainColorScheme;
+}
+.center-flex{
+
+}
+.main-logo{
+    max-height: 60px;
+}
+.border-orange{
+    border: 1px solid #FF6F61;
+}
+.text-align-left{
+    text-align: left;
+}
+.secondary-scheme{
+    color:black!important;
+    &:hover{
+        color: orange!important;
+    }
+}
+.feature-icon{
+    color:orange!important;
+    font-size: 32px;
+}

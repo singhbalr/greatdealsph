@@ -1,22 +1,18 @@
 import logo from './logo.svg';
+import Topbar from './component/topbar.component';
+import Navigation from './component/navigation.component';
+import MainPage from './component/mainpage.component';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className = "App-header">
+        {/* routing component */}
+        <Topbar></Topbar>
+        <Navigation></Navigation>
+        <MainPage></MainPage>
       </header>
     </div>
   );
