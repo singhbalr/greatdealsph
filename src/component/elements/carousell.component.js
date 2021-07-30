@@ -8,7 +8,7 @@ export class Carousell extends Component {
 
         return(
             carousellItems.map(currentCarousellItems =>{
-                    return <Carousel.Item interval={1000}> 
+                    return <Carousel.Item interval={1000} key ={currentCarousellItems.pictureUrl}> 
                     <img src= {currentCarousellItems.pictureUrl} alt = {currentCarousellItems.pictureUrl}></img> 
                     <Carousel.Caption>
                     <h3>{currentCarousellItems.caption}</h3>

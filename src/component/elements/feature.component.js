@@ -9,7 +9,7 @@ export class Feature extends Component {
             feautureItems.map((currentFeatureItems)=>{
                 return(
                     <Col>
-                        <span className = "feature-icon"><i className = {currentFeatureItems.feautureImageUrl}></i></span><h4>{currentFeatureItems.feautureLabelText}</h4><p>{currentFeatureItems.feautureLabelDescription}</p>
+                        <span className = "feature-icon"><i className = {currentFeatureItems.feautureImageUrl} key = {currentFeatureItems.feautureImageUrl}></i></span><h4>{currentFeatureItems.feautureLabelText}</h4><p>{currentFeatureItems.feautureLabelDescription}</p>
                     </Col>
                 )
             })

@@ -9,7 +9,7 @@ export class Category extends Component {
     
     renderNavigation(){
         return categories.map(currentCategories => {
-           return <Nav.Link as = {Link} to={`/product/productId=${currentCategories.categoryId}`} className = 'secondary-scheme'><i class = {currentCategories.faIcon}></i>{currentCategories.categoryName}</Nav.Link>
+           return <Nav.Link as = {Link} to={`/product/productId=${currentCategories.categoryId}`} className = 'secondary-scheme' key = {currentCategories.categoryId} ><i className = {currentCategories.faIcon}></i>{currentCategories.categoryName}</Nav.Link>
         })
     }
     

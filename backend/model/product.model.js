@@ -14,33 +14,34 @@ const productSchema = new Schema({
         trim: true
     },
     sku : {
-        type : String,
+        type : Number,
         required : true,
         trim: true
     },
     category_id : {
-        type : String,
+        type : Number,
         required : true,
         trim: true
     },
     inventory_id : {
-        type : String,
+        type : Number,
         required : true,
         trim: true
     },
     price : {
-        type : String,
+        type : Number,
         required : true,
         trim: true
     },
     discount : {
-        type : String,
+        type : Number,
         required : true,
         trim: true
     }
 }, {
     timestamps:true
 });
+
 
 const Product = mongoose.model('product', productSchema);
 
