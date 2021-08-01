@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Topbar from './component/topbar.component';
 import Navigation from './component/navigation.component';
 import MainPage from './component/mainpage.component';

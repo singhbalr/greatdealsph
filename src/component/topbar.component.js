@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Button, Alert, Navbar, Container, Row} from 'react-bootstrap'
+import {Navbar, Container, Row} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export class Topbar extends Component {

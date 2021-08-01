@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import {Card, Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 export class ProductCard extends Component {
-    constructor(props) {
-        super(props)
-    }
+
+    // constructor(props){
+    //     super(props);
+    // }
+
     render() {
+        const {_id, name, description} = this.props.product;
         return (
-            <Card style = {{ width: '18rem' }} key = {this.props.product._id}>
+            <Card style = {{ width: '18rem' }} key = {_id}>
                 <Card.Img variant="top" src="/assets/img/category-8.jpg" />
                 <Card.Body>
-                    <Card.Title>{this.props.product.name}</Card.Title>
+                    <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        {this.props.product.description}
+                        {description}
                     </Card.Text>
-                    <Button variant="primary">Edit</Button>
+                    <Button as = {Link} to = {'/product/edit/'+_id}>Edit Product</Button>
                     <Button variant="danger" onClick = {()=>this.props.deleteProduct(this.props.product._id)}>Delete</Button>
                 </Card.Body>
             </Card>

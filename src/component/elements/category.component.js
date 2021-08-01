@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import {Col, Container, Row, Nav} from 'react-bootstrap';
+import {Nav} from 'react-bootstrap';
 import {categories} from './../libs/constant';
 import {Link} from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 export class Category extends Component {
