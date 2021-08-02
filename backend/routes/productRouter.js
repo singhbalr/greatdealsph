@@ -30,26 +30,6 @@ productRouter.route('/add').post((req, res)=>{
 
 productRouter.route('/addBatch').post((req, res)=>{
     const batchRequest = req.body;
-    // const name = req.body.name;
-    // const description = req.body.description;
-    // const sku = req.body.sku;
-    // const category_id = req.body.category_id;
-    // const inventory_id = req.body.inventory_id;
-    // const price = req.body.price;
-    // const discount = req.body.discount;
-
-    // const newProduct = new Product({name, description, sku, category_id, inventory_id, price, discount});
-
-    // newProduct.save()
-    //     .then(product => res.json('New Record Added!'))
-    //     .catch(err => res.status(400).json('Error :' + err));
-
-
-    // const array = [
-    //     {firstName: "Jelly", lastName: "Bean"},
-    //     {firstName: "John", lastName: "Doe"}
-    // ];
-    
     Product.insertMany(req.body)
         .then(product=>{
             res.json('New Record Added!')
@@ -57,6 +37,22 @@ productRouter.route('/addBatch').post((req, res)=>{
         .catch(err =>{
             res.status(400).json('Error :' + err)
         });
+
+})
+
+productRouter.route('/search/:name').get((req, res)=>{
+    const searchString = req.params.name
+    //option i for case insensitive
+    // Product.find({'name' : {$regex : searchString, $options : 'i'}}, (error,data) => {
+    //    return error? console.log(error) : res.json(data);
+    // })
+
+    Product
+    .find({'name' : {$regex : searchString, $options : 'i'}})
+    .sort('-name')
+    .exec((error, data)=>{
+        return error? console.log(error) : res.json(data);
+    })
 
 })
 
